@@ -13,7 +13,7 @@ const Products = () => {
     }, [])
     return (
         <Container>
-            
+
             <div className="products-container">
                 {
                     products.slice(0, 6).map(product => <>

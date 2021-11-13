@@ -8,7 +8,7 @@ const Product = ({ product }) => {
     return (
 
         <Card sx={{ maxWidth: 345 }}>
-            
+
             <CardMedia
                 component="img"
                 alt="Camera"
