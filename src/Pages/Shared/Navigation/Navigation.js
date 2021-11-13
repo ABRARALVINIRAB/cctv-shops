@@ -9,6 +9,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom';
 import { color } from '@mui/system';
 import useAuth from '../../../hooks/useAuth';
+import logo from "../../../images/logo/logo.jpg"
 
 const Navigation = () => {
     const { user, logOut } = useAuth();
@@ -25,9 +26,11 @@ const Navigation = () => {
                     >
                         <MenuIcon />
                     </IconButton>
+                    <img style={{ height: "50px" }} src={logo} alt="" />
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                         CCTV SHOP
                     </Typography>
+
                     {/* <Link to="/appointment" style={{ textDecoration: "none", color: "white" }} >
                         <Button color="inherit">Appointment</Button>
                     </Link> */}

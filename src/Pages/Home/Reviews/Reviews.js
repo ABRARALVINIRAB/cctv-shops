@@ -1,6 +1,7 @@
 import { Container } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import SingleReview from './SingleReview/SingleReview';
+import './Review.css'
 
 const Reviews = () => {
     const [reviews, setReviews] = useState([]);
@@ -10,8 +11,11 @@ const Reviews = () => {
             .then(data => setReviews(data));
     }, [])
     return (
-        <Container>
-            <div className="products-container">
+
+
+        <Container >
+            <h1>Clients Reviews</h1>
+            <div className="review-container">
                 {
                     reviews.map(review => <>
                         <SingleReview
@@ -22,7 +26,9 @@ const Reviews = () => {
                     </>)
                 }
             </div>
+
         </Container>
+
     );
 };
 

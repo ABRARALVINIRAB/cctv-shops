@@ -7,6 +7,7 @@ import { useForm } from 'react-hook-form';
 import "./Order.css"
 import { stringify } from '@firebase/util';
 import { Link } from 'react-router-dom';
+import Navigation from '../../Shared/Navigation/Navigation';
 
 const Orders = () => {
     const { productId } = useParams();
@@ -31,7 +32,7 @@ const Orders = () => {
             .then(res => res.json())
             .then(data => {
                 if (data.insertedId) {
-                    alert('New service added succesfully');
+                    alert('Your order added succesfully');
                     reset();
                 }
             })
@@ -39,7 +40,9 @@ const Orders = () => {
 
     };
     return (
+        
         <Grid container spacing={2}>
+            
             <Grid item xs={12} md={6}>
                 <Link style={{ textDecoration: "none", color: "black" }} to='/home'>
                     <Button color="inherit">Go Back Home</Button>

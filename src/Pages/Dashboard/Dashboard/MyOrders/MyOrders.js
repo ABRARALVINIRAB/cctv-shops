@@ -7,7 +7,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import { Button } from '@mui/material';
+import { Button, Container, Grid } from '@mui/material';
 
 const MyOrders = () => {
     const [orders, setOrders] = useState([]);
@@ -48,42 +48,50 @@ const MyOrders = () => {
     return (
         <div>
             <h1>My orders</h1>
-            <TableContainer component={Paper}>
-                <Table sx={{}} aria-label="Appointments table">
-                    <TableHead>
-                        <TableRow>
-                            <TableCell>Email</TableCell>
-                            <TableCell align="right">ID</TableCell>
-                            <TableCell align="right">Status</TableCell>
+            <Grid container spacing={2}>
+                <Grid item xs={12} md={12}>
+                    <Container>
+                        <TableContainer component={Paper}>
+                            <Table sx={{ width: '80%' }} aria-label="Appointments table">
+                                <TableHead>
+                                    <TableRow>
+                                        <TableCell>Email</TableCell>
+                                        <TableCell align="right">ID</TableCell>
+                                        <TableCell align="right">Status</TableCell>
 
-                            <TableCell align="right">Action</TableCell>
+                                        <TableCell align="right">Action</TableCell>
 
-                        </TableRow>
-                    </TableHead>
-                    <TableBody>
-                        {matchingOrders.map((row) => (
-                            <TableRow
-                                key={row._id}
-                                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                            >
-                                <TableCell component="th" scope="row">
-                                    {row.email}
-                                </TableCell>
+                                    </TableRow>
+                                </TableHead>
+                                <TableBody>
+                                    {matchingOrders.map((row) => (
+                                        <TableRow
+                                            key={row._id}
+                                            sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                                        >
+                                            <TableCell component="th" scope="row">
+                                                {row.email}
+                                            </TableCell>
 
-                                <TableCell align="right">{row._id}</TableCell>
-                                <TableCell component="th" scope="row">
-                                    {row.status}
-                                </TableCell>
-                                <TableCell align="right">
-                                    <Button onClick={() => handleDeleteOrder(row._id)}>Delete</Button>
+                                            <TableCell align="right">{row._id}</TableCell>
+                                            <TableCell component="th" scope="row">
+                                                {row.status}
+                                            </TableCell>
+                                            <TableCell align="right">
+                                                <Button onClick={() => handleDeleteOrder(row._id)}>Delete</Button>
 
-                                </TableCell>
+                                            </TableCell>
 
-                            </TableRow>
-                        ))}
-                    </TableBody>
-                </Table>
-            </TableContainer>
+                                        </TableRow>
+                                    ))}
+                                </TableBody>
+                            </Table>
+                        </TableContainer>
+                    </Container>
+                </Grid>
+
+            </Grid>
+
         </div>
     );
 };

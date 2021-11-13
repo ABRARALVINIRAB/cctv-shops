@@ -1,4 +1,4 @@
-import { CardContent, Typography } from '@mui/material';
+import { CardContent, Container, Typography } from '@mui/material';
 import React from 'react';
 import useAuth from '../../../../hooks/useAuth';
 import Box from '@mui/material/Box';
@@ -14,7 +14,7 @@ const SingleReview = ({ review }) => {
     console.log(text);
     const [value, setValue] = React.useState(rating);
     return (
-        <div>
+        <Container>
             <CardContent style={{ backgroundColor: "seashell" }}>
                 <Typography gutterBottom variant="h4" component="div">
                     {name}
@@ -26,19 +26,15 @@ const SingleReview = ({ review }) => {
                     {text}
                 </Typography>
 
-                <Box
-                    sx={{
-                        '& > legend': { mt: 2 },
-                    }}
-                >
 
-                    <Typography component="legend">Rating</Typography>
-                    <Rating name="read-only" value={value} readOnly />
 
-                </Box>
+                <Typography component="legend">Rating</Typography>
+                <Rating name="read-only" value={value} readOnly />
+
+
 
             </CardContent>
-        </div>
+        </Container>
     );
 };
 

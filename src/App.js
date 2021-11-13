@@ -10,6 +10,7 @@ import Allproducts from './Pages/AllProducts/Allproducts';
 import Orders from './Pages/Orders/Orders/Orders';
 import PrivateRoute from './Pages/Login/Login/PrivateRoute/PrivateRoute';
 import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
+import NotFound from './Pages/Orders/Orders/NotFound/NotFound';
 
 
 function App() {
@@ -48,7 +49,9 @@ function App() {
             <Route path="/footer">
               <Footer></Footer>
             </Route>
-
+            <Route path="*">
+              <NotFound></NotFound>
+            </Route>
 
           </Switch>
 

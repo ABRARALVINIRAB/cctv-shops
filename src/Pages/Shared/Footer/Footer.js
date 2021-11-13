@@ -9,7 +9,7 @@ const Footer = () => {
 
 
 
-        <Grid container spacing={2}>
+        <Grid sx={{ backgroundColor: "lightgrey", marginTop: "30px" }} container spacing={2}>
             <Grid item xs={12} md={4}>
                 <img style={{ width: "200px", height: "200px" }} src={logo} alt="" />
                 <h3 className="text-color">Your Security Is Our Best Priority</h3>
@@ -21,7 +21,7 @@ const Footer = () => {
             </Grid>
             <Grid item xs={12} md={4}>
                 <h1 className="text-color">Make a Appointment</h1>
-                <Link className="link" to="/appointment"><button>Click here</button></Link>
+                <button>Click here</button>
                 <h2 className="text-color">Location</h2>
                 <p className="text-color"> <i class="fas fa-map-marker"></i> Bajitpur,kishoregonj</p>
             </Grid>

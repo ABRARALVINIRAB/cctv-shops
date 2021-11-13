@@ -27,7 +27,7 @@ const ManageProducts = () => {
                 .then(data => {
                     if (data.deletedCount) {
 
-                        window.alert('delete succesfully')
+                        window.alert('Delete succesfully')
                     }
                     const remaining = allproducts.filter(order => order._id !== id);
                     setAllProducts(remaining)
