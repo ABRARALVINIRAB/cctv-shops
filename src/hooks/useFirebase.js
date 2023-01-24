@@ -105,7 +105,7 @@ const useFirebase = () => {
     const saveUser = (email, displayName, method) => {
         const user = { email, displayName }
         console.log("user", user);
-        fetch('https://secret-castle-91056.herokuapp.com/users', {
+        fetch('https://cctv-server-site-new.vercel.app/users', {
             method: method,
             headers: {
                 'content-type': 'application/json'
@@ -115,7 +115,7 @@ const useFirebase = () => {
             .then()
     }
     useEffect(() => {
-        fetch(`https://secret-castle-91056.herokuapp.com/users/${user?.email}`)
+        fetch(`https://cctv-server-site-new.vercel.app/users/${user?.email}`)
             .then(res => res.json())
             .then(data => setAdmin(data.admin))
     }, [user?.email])

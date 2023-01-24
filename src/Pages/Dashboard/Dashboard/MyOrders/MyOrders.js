@@ -14,7 +14,7 @@ const MyOrders = () => {
     console.log(orders);
     const { user } = useAuth();
     useEffect(() => {
-        const url = 'https://secret-castle-91056.herokuapp.com/orders'
+        const url = 'https://cctv-server-site-new.vercel.app/orders'
         fetch(url)
             .then(res => res.json())
             .then(data => setOrders(data))
@@ -30,7 +30,7 @@ const MyOrders = () => {
     const handleDeleteOrder = (id) => {
         const proceed = window.confirm('Are you sure to delete this?');
         if (proceed) {
-            const url = `https://secret-castle-91056.herokuapp.com/orders/${id}`;
+            const url = `https://cctv-server-site-new.vercel.app/orders/${id}`;
             fetch(url, {
                 method: "DELETE"
             })

@@ -7,7 +7,7 @@ const Review = () => {
     const { reset, register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => {
         console.log(data);
-        fetch("https://secret-castle-91056.herokuapp.com/reviews", {
+        fetch("https://cctv-server-site-new.vercel.app/reviews", {
             method: "POST",
             headers: {
                 "content-type": "application/json"

@@ -22,7 +22,7 @@ const Orders = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const onSubmit = data => {
         console.log(data)
-        fetch('https://secret-castle-91056.herokuapp.com/orders', {
+        fetch('https://cctv-server-site-new.vercel.app/orders', {
             method: "POST",
             headers: {
                 'content-type': "application/json"
@@ -40,9 +40,9 @@ const Orders = () => {
 
     };
     return (
-        
+
         <Grid container spacing={2}>
-            
+
             <Grid item xs={12} md={6}>
                 <Link style={{ textDecoration: "none", color: "black" }} to='/home'>
                     <Button color="inherit">Go Back Home</Button>

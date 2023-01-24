@@ -6,7 +6,7 @@ import './Review.css'
 const Reviews = () => {
     const [reviews, setReviews] = useState([]);
     useEffect(() => {
-        fetch('https://secret-castle-91056.herokuapp.com/reviews')
+        fetch('https://cctv-server-site-new.vercel.app/reviews')
             .then(res => res.json())
             .then(data => setReviews(data));
     }, [])
@@ -17,7 +17,7 @@ const Reviews = () => {
             <h1>Clients Reviews</h1>
 
 
-            
+
             <div className="review-container">
                 {
                     reviews.map(review => <>
