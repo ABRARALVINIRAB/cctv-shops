@@ -10,7 +10,7 @@ const MakeAdmin = () => {
     const handleAdminSubmit = (e) => {
 
         const user = { email };
-        fetch('https://cctv-server-site-new.vercel.app/users/admin', {
+        fetch('https://cctv-server.onrender.com/users/admin', {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

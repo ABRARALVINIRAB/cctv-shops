@@ -7,7 +7,7 @@ import './Products.css'
 const Products = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        fetch('https://cctv-server-site-new.vercel.app/products')
+        fetch('https://cctv-server.onrender.com/products')
             .then(res => res.json())
             .then(data => setProducts(data));
     }, [])

@@ -22,7 +22,7 @@ const Orders = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const onSubmit = data => {
         console.log(data)
-        fetch('https://cctv-server-site-new.vercel.app/orders', {
+        fetch('https://cctv-server.onrender.com/orders', {
             method: "POST",
             headers: {
                 'content-type': "application/json"

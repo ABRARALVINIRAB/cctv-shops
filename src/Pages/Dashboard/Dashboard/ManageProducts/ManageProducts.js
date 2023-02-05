@@ -11,7 +11,7 @@ import { Button } from '@mui/material';
 const ManageProducts = () => {
     const [allproducts, setAllProducts] = useState([]);
     useEffect(() => {
-        fetch('https://cctv-server-site-new.vercel.app/products')
+        fetch('https://cctv-server.onrender.com/products')
             .then(res => res.json())
             .then(data => setAllProducts(data));
     }, [])
@@ -19,7 +19,7 @@ const ManageProducts = () => {
     const handleDeleteProduct = (id) => {
         const proceed = window.confirm('Are you sure to delte this item')
         if (proceed) {
-            const url = `https://cctv-server-site-new.vercel.app/products/${id}`;
+            const url = `https://cctv-server.onrender.com/products/${id}`;
             fetch(url, {
                 method: "DELETE"
             })

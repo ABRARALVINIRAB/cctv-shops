@@ -105,7 +105,7 @@ const useFirebase = () => {
     const saveUser = (email, displayName, method) => {
         const user = { email, displayName }
         console.log("user", user);
-        fetch('https://cctv-server-site-new.vercel.app/users', {
+        fetch('https://cctv-server.onrender.com/users', {
             method: method,
             headers: {
                 'content-type': 'application/json'
@@ -115,7 +115,7 @@ const useFirebase = () => {
             .then()
     }
     useEffect(() => {
-        fetch(`https://cctv-server-site-new.vercel.app/users/${user?.email}`)
+        fetch(`https://cctv-server.onrender.com/users/${user?.email}`)
             .then(res => res.json())
             .then(data => setAdmin(data.admin))
     }, [user?.email])

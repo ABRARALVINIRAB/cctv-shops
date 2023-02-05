@@ -6,7 +6,7 @@ import './Review.css'
 const Reviews = () => {
     const [reviews, setReviews] = useState([]);
     useEffect(() => {
-        fetch('https://cctv-server-site-new.vercel.app/reviews')
+        fetch('https://cctv-server.onrender.com/reviews')
             .then(res => res.json())
             .then(data => setReviews(data));
     }, [])

@@ -4,7 +4,7 @@ const AddAProduct = () => {
     const { reset, register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => {
         console.log(data);
-        fetch("https://cctv-server-site-new.vercel.app/products", {
+        fetch("https://cctv-server.onrender.com/products", {
             method: "POST",
             headers: {
                 "content-type": "application/json"

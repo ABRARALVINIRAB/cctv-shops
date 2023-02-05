@@ -7,7 +7,7 @@ const ManageOrders = () => {
     const [updated, setUpdated] = useState();
 
     useEffect(() => {
-        fetch('https://cctv-server-site-new.vercel.app/orders')
+        fetch('https://cctv-server.onrender.com/orders')
             .then(res => res.json())
             .then(data => setOrders(data))
 
@@ -15,7 +15,7 @@ const ManageOrders = () => {
     const handleDeleteOrder = (id) => {
         const proceed = window.confirm('Are you sure to delete this?');
         if (proceed) {
-            const url = `https://cctv-server-site-new.vercel.app/orders/${id}`;
+            const url = `https://cctv-server.onrender.com/orders/${id}`;
             fetch(url, {
                 method: "DELETE"
             })
@@ -59,7 +59,7 @@ const ManageOrders = () => {
         if (matched[0].name) {
             console.log("updated", updated);
 
-            const url = `https://cctv-server-site-new.vercel.app/orders/${id}`;
+            const url = `https://cctv-server.onrender.com/orders/${id}`;
             fetch(url, {
                 method: "PUT",
                 headers: {

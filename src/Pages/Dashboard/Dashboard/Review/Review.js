@@ -7,7 +7,7 @@ const Review = () => {
     const { reset, register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => {
         console.log(data);
-        fetch("https://cctv-server-site-new.vercel.app/reviews", {
+        fetch("https://cctv-server.onrender.com/reviews", {
             method: "POST",
             headers: {
                 "content-type": "application/json"
