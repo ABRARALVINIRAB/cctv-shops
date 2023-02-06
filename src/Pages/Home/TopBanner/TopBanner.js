@@ -24,14 +24,14 @@ const TopBanner = () => {
         <Box style={background} sx={{ ...forheight, flexGrow: 1 }}>
             <Grid container spacing={2}>
                 <Grid item xs={12} md={12}>
-                    <Typography sx={{ color: 'black' }} variant="h1" >
+                    <Typography sx={{ color: 'black' }} variant="h2" >
                         A Better  Life <br />
 
-                    </Typography>;
+                    </Typography>
                     <Typography sx={{ color: 'primary.main' }} variant="h1" >
 
                         A Better World
-                    </Typography>;
+                    </Typography>
                     <Link style={{ textDecoration: "none", backgroundColor: "black" }} to="/allProducts">
                         <Button variant="contained" endIcon={<SendIcon />}>Explore All Products</Button>
                     </Link>
